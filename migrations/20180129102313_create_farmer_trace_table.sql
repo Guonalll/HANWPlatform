@@ -1,0 +1,31 @@
+DROP TABLE IF EXISTS `farmer_traces`;
+
+CREATE TABLE `farmer_traces` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id',
+  `farmer_id` int(11) unsigned NOT NULL COMMENT 'farmer_id',
+  `time` datetime DEFAULT NULL COMMENT 'time',
+  `remaining_water` double(16, 2) DEFAULT NULL COMMENT 'remaining_water',
+  `precip` double(16, 2) DEFAULT NULL COMMENT 'precip',
+  `eto` double(16, 2) DEFAULT NULL COMMENT 'ETO',
+  `zr_rice` double(16, 2) DEFAULT NULL COMMENT 'zr_rice',
+  `raw_rice` double(16, 2) DEFAULT NULL COMMENT 'raw_rice',
+  `irri_rice` double(16, 2) DEFAULT NULL COMMENT 'irri_rice',
+  `kc_rice` double(16, 2) DEFAULT NULL COMMENT 'kc_rice',
+  `etc_rice` double(16, 2) DEFAULT NULL COMMENT 'ETC_rice',
+  `ks_rice` double(16, 2) DEFAULT NULL COMMENT 'ks_rice',
+  `etcadj_rice` double(16, 2) DEFAULT NULL COMMENT 'etcadj_rice',
+  `dr_rice` double(16, 2) DEFAULT NULL COMMENT 'dr_rice',
+  `yield_rice` double(16, 2) DEFAULT NULL COMMENT 'yield_rice',
+  `zr_maize` double(16, 2) DEFAULT NULL COMMENT 'zr_maize',
+  `raw_maize` double(16, 2) DEFAULT NULL COMMENT 'raw_maize',
+  `irri_maize` double(16, 2) DEFAULT NULL COMMENT 'irri_maize',
+  `kc_maize` double(16, 2) DEFAULT NULL COMMENT 'kc_maize',
+  `etc_maize` double(16, 2) DEFAULT NULL COMMENT 'eto_maize',
+  `ks_maize` double(16, 2) DEFAULT NULL COMMENT 'ks_maize',
+  `etcadj_maize` double(16, 2) DEFAULT NULL COMMENT 'etcadj_maize',
+  `dr_maize` double(16, 2) DEFAULT NULL COMMENT 'dr_maize',
+  `yield_maize` double(16, 2) DEFAULT NULL COMMENT 'yield_maize',
+  `created_at` datetime DEFAULT NULL COMMENT 'create',
+  `updated_at` datetime DEFAULT NULL COMMENT 'update',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
